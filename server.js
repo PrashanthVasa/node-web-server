@@ -24,6 +24,13 @@ app.get('/about',(req,res) => {
     });
 });
 
+app.get('/projects',(req,res) => {
+    res.render('projects.hbs',{
+        pageTitle: 'Proj Pagee',
+        CurrentYear:new Date().getFullYear()
+    });
+});
+
 app.get('/bad',(req,res) => {
     res.send({
         ErroeMessage : " hai"
